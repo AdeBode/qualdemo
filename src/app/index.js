@@ -6,6 +6,7 @@ import store from "store";
 import TransitionWrapper from "./TransitionWrapper";
 import AppBar from "components/appbar";
 import MainPage from "pages/main-page";
+import ContactPage from "pages/contact-page";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
           <AppBar />
           <TransitionWrapper>
             <Route exact path="/contact/:contactID">
-              <MainPage />
+              <ContactPage />
             </Route>
             <Route exact path="/">
               <MainPage />

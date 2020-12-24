@@ -14,8 +14,8 @@ const mapStyles = (styles) => {
 // wrap the `spring` helper to use a bouncy config
 const bounce = (val) => {
   return spring(val, {
-    stiffness: 330,
-    damping: 52,
+    stiffness: 400,
+    damping: 50,
   });
 };
 
@@ -25,11 +25,6 @@ const bounceTransition = {
   atEnter: {
     opacity: 0,
     scale: 1.2,
-  },
-  // leave in a transparent, downscaled state
-  atLeave: {
-    opacity: bounce(0),
-    scale: bounce(0.8),
   },
   // and rest at an opaque, normally-scaled state
   atActive: {
@@ -41,7 +36,7 @@ const bounceTransition = {
 const TransitionWrapper = ({ children, ...props }) => (
   <AnimatedSwitch
     atEnter={bounceTransition.atEnter}
-    atLeave={bounceTransition.atLeave}
+    atLeave={{}}
     atActive={bounceTransition.atActive}
     className="switch-wrapper"
     mapStyles={mapStyles}

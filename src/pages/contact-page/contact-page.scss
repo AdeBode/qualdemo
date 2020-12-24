@@ -1,0 +1,44 @@
+@import "~styles/variables";
+
+.contact-page {
+  padding: 1rem;
+
+  .contact-page-content {
+    max-width: $medium;
+    margin: auto;
+
+    .detail-type {
+      color: $dark-1;
+      display: inline-block;
+      width: 6rem;
+    }
+
+    .detail-content {
+      font-weight: 600;
+      color: $dark-1;
+    }
+  }
+
+  .contact-page-image-wrapper {
+    .contact-page-image {
+      display: block;
+      max-width: 4rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .contact-page-button-wrapper {
+    margin-top: 1rem;
+    & > *:not(:first-child) {
+      margin-left: 0.5rem;
+    }
+
+    button {
+      background-color: $dark-2;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

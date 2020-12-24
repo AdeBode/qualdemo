@@ -1,4 +1,4 @@
-import { ADD_CONTACT } from "types";
+import { ADD_CONTACT, UPDATE_CONTACT } from "types";
 
 const initialState = {
   contactsList: [],
@@ -10,6 +10,14 @@ const contactsReducer = (state = initialState, action) => {
       return {
         ...state,
         contactsList: [...state.contactsList, ...action.newContact],
+      };
+    }
+    case UPDATE_CONTACT: {
+      const updatedContactsList = [...state.contactsList];
+      updatedContactsList[action.index] = action.data;
+      return {
+        ...state,
+        contactsList: updatedContactsList,
       };
     }
     default:

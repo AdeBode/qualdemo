@@ -1,25 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./main-page.scss";
 import mockAxios from "apis";
 import { addContact } from "actions";
 import ContactCard from "components/contact-card";
-
-const dummyArray = [
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-  { name: 1, age: 2 },
-];
+import AddCard from "components/add-card";
 
 const MainPage = () => {
   // connect to Redux store
-  const contacts = useSelector((store) => store.contacts.contacts);
+  const contactsList = useSelector((store) => store.contacts.contactsList);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,21 +21,31 @@ const MainPage = () => {
         })
         .catch((e) => console.error(e));
 
-    generateFirstContact();
+    !contactsList.length && generateFirstContact();
 
     // if we didn't mock axios we would cancel in-flight requests here
     // to prevent memory leaks upon component un-mounting
     // return generateFirstContact.cancel()
-  }, []);
+  }, [contactsList, dispatch]);
 
   return (
     <section className="contact-page">
       <h1>Your Contacts</h1>
-      <div className="contact-grid">
-        {dummyArray.map((contact, index) => (
-          <ContactCard clickable key={index} />
-        ))}
-      </div>
+      {contactsList.length ? (
+        <div className="contact-grid">
+          {contactsList.map((contact, index) => (
+            <ContactCard
+              clickable
+              key={index}
+              contact={contact}
+              index={index}
+            />
+          ))}
+          <AddCard />
+        </div>
+      ) : (
+        <div>loading...</div>
+      )}
     </section>
   );
 };
