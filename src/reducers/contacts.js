@@ -5,12 +5,18 @@ const initialState = {
 };
 
 const contactsReducer = (state = initialState, action) => {
+  const localSave = (contactsList) => {
+    window.localStorage.setItem("my_contacts", JSON.stringify(contactsList));
+  };
+
   switch (action.type) {
     case ADD_CONTACT: {
-      return {
+      const newState = {
         ...state,
         contactsList: [...state.contactsList, ...action.newContact],
       };
+      localSave(newState.contactsList);
+      return newState;
     }
     case UPDATE_CONTACT: {
       const updatedContactsList = [...state.contactsList];

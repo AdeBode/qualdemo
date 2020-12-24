@@ -33,8 +33,8 @@ The goal is to get a better understanding of your level of JavaScript knowledge 
 - [x] Visualize multiple contacts on an overview page with 2 different statuses ("Work" or "Private").
 - [x] Show at least the name, email, phone number and status of each contact.
 - [x] Add a new contact
-- [] Delete a contact.
-- [] Edit a contact.
+- [x] Delete a contact.
+- [x] Edit a contact.
 - [] Persistent storage (The state of the contacts and the contact list should still be available after reloading the application. After reloading you no longer need to call the api if there are already contacts in the list.)
 
 ## Available Scripts
