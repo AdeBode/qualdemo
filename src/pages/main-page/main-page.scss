@@ -1,0 +1,14 @@
+@import "~styles/variables";
+
+.contact-page {
+  margin: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  & > * {
+    margin: 1rem;
+  }
+}

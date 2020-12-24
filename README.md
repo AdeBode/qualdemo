@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+# Tech. Assessment, Anton de Bode
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create React App in order to focus on the content instead of setting up the tool-chain (Webpack+Babel) etc.
+
+## Assignment
+
+The idea is that you spend 2 to 4 hours on building a small application with the next requirements:
+
+We would like you to create an Address Book & Contacts application using the following technologies:
+
+- Front-end written in HTML, CSS and JavaScript (you can use any JS based framework, like Angular, React, etc. But no library for CSS or components).
+- Use any State Management library you like.
+- Mock the api of https://randomuser.me/ and use the mocked api to get the data of the first contact in the application.
+- At least 50% code coverage of your components code unit-tested
+- Commit the assignment to github (or other git repo) for later review.
+
+Functional wise it should be possible to:
+
+- Visualize multiple contacts on an overview page with 2 different statuses ("Work" or "Private").
+- Show at least the name, email, phone number and status of each contact.
+- Add a new contact.
+- Delete a contact.
+- Edit a contact.
+- The state of the contacts and the contact list should still be available after reloading the application. After reloading you no longer need to call the api if there are already contacts in the list.
+
+The goal is to get a better understanding of your level of JavaScript knowledge and way of thinking.
+
+## Requirements Checklist
+
+- [x] No off-the-shelf ui-components / styling
+- [x] Mock the api of https://randomuser.me/ to get the data of the first contact
+- [] test-coverage of >= 50% of components
+- [] Visualize multiple contacts on an overview page with 2 different statuses ("Work" or "Private").
+- [] Show at least the name, email, phone number and status of each contact.
+- [] Add a new contact
+- [] Delete a contact.
+- [] Edit a contact.
+- [] Persistent storage (The state of the contacts and the contact list should still be available after reloading the application. After reloading you no longer need to call the api if there are already contacts in the list.)
 
 ## Available Scripts
 
@@ -18,53 +53,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
