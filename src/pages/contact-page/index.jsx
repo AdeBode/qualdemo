@@ -4,7 +4,7 @@ import { useParams, useHistory, Redirect } from "react-router-dom";
 
 import "./contact-page.scss";
 import defaultProfileImage from "images/default-profile-image.png";
-import { updateContact } from "actions";
+import { updateContact, deleteContact } from "actions";
 
 const ContactPage = () => {
   let history = useHistory();
@@ -51,6 +51,11 @@ const ContactPage = () => {
     dispatch(updateContact(contactID, reformattedData));
   };
 
+  const handleDelete = () => {
+    history.push("/");
+    dispatch(deleteContact(contactID));
+  };
+
   const mapItemToRow = useCallback(() => {
     const handleInputChange = (event) => {
       const {
@@ -92,6 +97,7 @@ const ContactPage = () => {
         <div className="contact-page-button-wrapper">
           <button onClick={handleBack}>back</button>
           <button onClick={handleSave}>save changes</button>
+          <button onClick={handleDelete}>delete contact</button>
         </div>
       </div>
     </div>

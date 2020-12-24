@@ -1,4 +1,4 @@
-import { ADD_CONTACT, UPDATE_CONTACT } from "types";
+import { ADD_CONTACT, UPDATE_CONTACT, DELETE_CONTACT } from "types";
 
 const emptyContact = [
   {
@@ -27,4 +27,9 @@ export const updateContact = (index, data) => ({
   type: UPDATE_CONTACT,
   index,
   data,
+});
+
+export const deleteContact = (index) => ({
+  type: DELETE_CONTACT,
+  index,
 });
