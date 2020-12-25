@@ -19,6 +19,9 @@ describe("upon initial state", () => {
     expect(screen.getByTestId("contact-grid")).toBeInTheDocument();
   });
 
+  // test will fail (75% of the time) because it will also match the previous render
+  // even if explicitly .unmounted()
+
   test("clicking add contact button will add a new blank contact", async () => {
     render(<App />);
     await waitFor(() => screen.getByTestId("contact-grid-card"));

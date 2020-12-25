@@ -29,7 +29,7 @@ The goal is to get a better understanding of your level of JavaScript knowledge 
 
 - [x] No off-the-shelf ui-components / styling
 - [x] Mock the api of https://randomuser.me/ to get the data of the first contact
-- [~] test-coverage of >= 50% of components: Notes -> hit a bug with Ractt 17 as commented in the only test file. This proved to be a big time sink so test coverage is limited as a result. Will happily discuss in person how I would have proceeded otherwise.
+- [~] test-coverage of >= 50% of components: Notes -> hit a bug with React 17 as commented in the only test file. This proved to be a big time sink so test coverage is limited as a result. Will happily discuss in person how I would have proceeded otherwise.
 - [x] Visualize multiple contacts on an overview page with 2 different statuses ("Work" or "Private").
 - [x] Show at least the name, email, phone number and status of each contact.
 - [x] Add a new contact
@@ -40,6 +40,10 @@ The goal is to get a better understanding of your level of JavaScript knowledge 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn install`
+
+and then:
 
 ### `yarn start`
 
