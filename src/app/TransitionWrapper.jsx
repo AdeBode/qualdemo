@@ -33,7 +33,7 @@ const bounceTransition = {
   },
 };
 
-const TransitionWrapper = ({ children, ...props }) => (
+const TransitionWrapper = ({ children }) => (
   <AnimatedSwitch
     atEnter={bounceTransition.atEnter}
     atLeave={{}}

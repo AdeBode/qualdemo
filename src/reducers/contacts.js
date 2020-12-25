@@ -21,6 +21,7 @@ const contactsReducer = (state = initialState, action) => {
     case UPDATE_CONTACT: {
       const updatedContactsList = [...state.contactsList];
       updatedContactsList[action.index] = action.data;
+      localSave(updatedContactsList);
       return {
         ...state,
         contactsList: updatedContactsList,
@@ -29,6 +30,7 @@ const contactsReducer = (state = initialState, action) => {
     case DELETE_CONTACT: {
       const updatedContactsList = [...state.contactsList];
       updatedContactsList.splice(action.index, 1);
+      localSave(updatedContactsList);
       return {
         ...state,
         contactsList: updatedContactsList,

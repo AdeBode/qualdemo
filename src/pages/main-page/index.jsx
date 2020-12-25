@@ -32,7 +32,7 @@ const MainPage = () => {
     <section className="contact-page">
       <h1>Your Contacts</h1>
       {contactsList.length ? (
-        <div className="contact-grid">
+        <div className="contact-grid" data-testid="contact-grid">
           {contactsList.map((contact, index) => (
             <ContactCard
               clickable

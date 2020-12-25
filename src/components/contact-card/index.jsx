@@ -40,6 +40,7 @@ const ContactCard = ({ contact = {}, clickable = false, index }) => {
     <div
       className={clsx("contact-card", clickable ? "clickable" : null)}
       onClick={() => history.push(`/contact/${index}`)}
+      data-testid="contact-grid-card"
     >
       <section className="contact-card-details">
         <h2>{`${first} ${last}`}</h2>

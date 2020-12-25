@@ -29,13 +29,13 @@ The goal is to get a better understanding of your level of JavaScript knowledge 
 
 - [x] No off-the-shelf ui-components / styling
 - [x] Mock the api of https://randomuser.me/ to get the data of the first contact
-- [] test-coverage of >= 50% of components
+- [~] test-coverage of >= 50% of components: Notes -> hit a bug with Ractt 17 as commented in the only test file. This proved to be a big time sink so test coverage is limited as a result. Will happily discuss in person how I would have proceeded otherwise.
 - [x] Visualize multiple contacts on an overview page with 2 different statuses ("Work" or "Private").
 - [x] Show at least the name, email, phone number and status of each contact.
 - [x] Add a new contact
 - [x] Delete a contact.
 - [x] Edit a contact.
-- [] Persistent storage (The state of the contacts and the contact list should still be available after reloading the application. After reloading you no longer need to call the api if there are already contacts in the list.)
+- [x] Persistent storage (The state of the contacts and the contact list should still be available after reloading the application. After reloading you no longer need to call the api if there are already contacts in the list.)
 
 ## Available Scripts
 

@@ -44,5 +44,10 @@
   },
   "devDependencies": {
     "redux-devtools": "^3.7.0"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-router-transition)/)"
+    ]
   }
 }
